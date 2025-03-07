@@ -11,3 +11,8 @@ output/
 
 
 .vscode/
+
+
+# 忽略測試檔案
+
+test/
