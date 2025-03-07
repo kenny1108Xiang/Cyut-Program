@@ -1,0 +1,13 @@
+# 忽略 exe、.txt 檔案
+
+*.exe
+*.txt
+
+# 忽略vscode的output資料夾
+
+output/
+
+# 忽略vscode設定檔案
+
+
+.vscode/
