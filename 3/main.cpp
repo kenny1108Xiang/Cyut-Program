@@ -8,10 +8,11 @@
 using namespace std;
 
 /*
-    string 函式庫有提供兩種方式將字串轉為數字
-    stoi() 與 stod()
+    string 函式庫有提供一些方式將字串轉為數字
+    常使用: stoi() stof() stod()
 
     stoi : string -> int
+    stof : string -> float
     stod : string -> double
 */
 
@@ -20,7 +21,7 @@ using namespace std;
 int main() {
 
     string s, op, num_temp;
-    vector <double> num;
+    vector <float> num;
 
     ifstream file("c.txt");
 
@@ -34,18 +35,18 @@ int main() {
         }
         else if (s[i] != '=') {
             // 處理數字部分
-            num.push_back(stod(num_temp));
+            num.push_back(stof(num_temp));
             num_temp = "";
 
             // 處理運算符號部分
             op += s[i];
         } else {
             // 處理 = 符號的前一個數字
-            num.push_back(stod(num_temp));
+            num.push_back(stof(num_temp));
         }
     }
 
-    double ans = num[0]; //直接先將num陣列的第一位索引設為ans, 變成num陣列所需遍歷索引與op陣列數量一樣
+    float ans = num[0]; //直接先將num陣列的第一位索引設為ans, 變成num陣列所需遍歷索引與op陣列數量一樣
     for (size_t i = 0, j = 1; i < op.size(); i++, j++) {
         switch (op[i]) {
             case '+':
