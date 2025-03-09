@@ -17,7 +17,6 @@ int main() {
 
     cout << num1 << '\n' << num2 << '\n' << "Ans=";
 
-
     // 找A
     for (size_t i = 0; i < num1.size(); ++i) {
         if (num1[i] == num2[i]) {
