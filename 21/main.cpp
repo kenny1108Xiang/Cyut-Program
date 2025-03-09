@@ -16,7 +16,7 @@ int main() {
     file.close();
 
     cout << num1 << '\n' << num2 << '\n' << "Ans=";
-    
+
 
     // 找A
     for (size_t i = 0; i < num1.size(); ++i) {
@@ -25,7 +25,7 @@ int main() {
             num1[i] = '\0';
             num2[i] = '\0';
         }
-        
+
         // 找B
         for (size_t j = 0; j < i; ++j) {
             if (num1[i] == num2[j] && num1[i] != '\0' && num2[j] != '\0') {
